@@ -41,7 +41,7 @@ describe('TodosListView', function() {
       ajaxStub.args[0][0].success([
         { title: 'Write better ajax tests', completed: true },
       ]);
-      view.$el.html().should.include('Write better ajax tests');
+      view.$el.html().should.containEql('Write better ajax tests');
     });
     
     it('binds events to render', function(){
